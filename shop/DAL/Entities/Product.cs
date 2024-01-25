@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities
 {
-    internal class Products
+    public class Product : BaseEntity
     {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public decimal Price { get; set; }
+        public string Img { get; set; }
+        // Navigation property for many-to-many relationship with Order
+        public ICollection<Order> Orders { get; set; }
     }
 }
