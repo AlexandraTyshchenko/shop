@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\oleks\\Desktop\\shop\\API\\API.csproj": {}
+    "C:\\Users\\oleks\\Documents\\shop\\shop\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\oleks\\Desktop\\shop\\API\\API.csproj": {
+    "C:\\Users\\oleks\\Documents\\shop\\shop\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oleks\\Desktop\\shop\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\oleks\\Documents\\shop\\shop\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\oleks\\Desktop\\shop\\API\\API.csproj",
+        "projectPath": "C:\\Users\\oleks\\Documents\\shop\\shop\\API\\API.csproj",
         "packagesPath": "C:\\Users\\oleks\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oleks\\Desktop\\shop\\API\\obj\\",
+        "outputPath": "C:\\Users\\oleks\\Documents\\shop\\shop\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\oleks\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\oleks\\Desktop\\shop\\BLL\\BLL.csproj": {
-                "projectPath": "C:\\Users\\oleks\\Desktop\\shop\\BLL\\BLL.csproj"
+              "C:\\Users\\oleks\\Documents\\shop\\shop\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Users\\oleks\\Documents\\shop\\shop\\BLL\\BLL.csproj"
               },
-              "C:\\Users\\oleks\\Desktop\\shop\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\oleks\\Desktop\\shop\\DAL\\DAL.csproj"
+              "C:\\Users\\oleks\\Documents\\shop\\shop\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\oleks\\Documents\\shop\\shop\\DAL\\DAL.csproj"
               }
             }
           }
@@ -79,14 +79,14 @@
         }
       }
     },
-    "C:\\Users\\oleks\\Desktop\\shop\\BLL\\BLL.csproj": {
+    "C:\\Users\\oleks\\Documents\\shop\\shop\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oleks\\Desktop\\shop\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\oleks\\Documents\\shop\\shop\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "C:\\Users\\oleks\\Desktop\\shop\\BLL\\BLL.csproj",
+        "projectPath": "C:\\Users\\oleks\\Documents\\shop\\shop\\BLL\\BLL.csproj",
         "packagesPath": "C:\\Users\\oleks\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oleks\\Desktop\\shop\\BLL\\obj\\",
+        "outputPath": "C:\\Users\\oleks\\Documents\\shop\\shop\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\oleks\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -103,8 +103,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\oleks\\Desktop\\shop\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\oleks\\Desktop\\shop\\DAL\\DAL.csproj"
+              "C:\\Users\\oleks\\Documents\\shop\\shop\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\oleks\\Documents\\shop\\shop\\DAL\\DAL.csproj"
               }
             }
           }
@@ -138,14 +138,14 @@
         }
       }
     },
-    "C:\\Users\\oleks\\Desktop\\shop\\DAL\\DAL.csproj": {
+    "C:\\Users\\oleks\\Documents\\shop\\shop\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oleks\\Desktop\\shop\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\oleks\\Documents\\shop\\shop\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\oleks\\Desktop\\shop\\DAL\\DAL.csproj",
+        "projectPath": "C:\\Users\\oleks\\Documents\\shop\\shop\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\oleks\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oleks\\Desktop\\shop\\DAL\\obj\\",
+        "outputPath": "C:\\Users\\oleks\\Documents\\shop\\shop\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\oleks\\AppData\\Roaming\\NuGet\\NuGet.Config",

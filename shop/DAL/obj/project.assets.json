@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\oleks\\Desktop\\shop\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\oleks\\Documents\\shop\\shop\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\oleks\\Desktop\\shop\\DAL\\DAL.csproj",
+      "projectPath": "C:\\Users\\oleks\\Documents\\shop\\shop\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\oleks\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\oleks\\Desktop\\shop\\DAL\\obj\\",
+      "outputPath": "C:\\Users\\oleks\\Documents\\shop\\shop\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\oleks\\AppData\\Roaming\\NuGet\\NuGet.Config",
