@@ -35,5 +35,13 @@ namespace API
             var result = _mapper.Map<ProductModel>(product);
             return Ok(result);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> GetProductsByIds([FromBody] int[] ids)//post method to pass values from body
+        {
+            var products = await _productProvider.GetProductsByIds(ids);
+            var result = _mapper.Map<IEnumerable<ProductModel>>(products);
+            return Ok(result);
+        }
     }
 }

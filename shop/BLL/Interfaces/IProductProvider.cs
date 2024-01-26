@@ -11,5 +11,6 @@ namespace BLL.Interfaces
     {
         Task<IEnumerable<Product>> GetAllProductsAsync();
         Task<Product> GetProductByIdAsync(int id);
+        Task<IEnumerable<Product>> GetProductsByIds(int[] ids);
     }
 }

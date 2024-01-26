@@ -12,6 +12,7 @@ header {
   flex-wrap: wrap;
   background-color: #FFEB3B;
   padding: 20px 10px;
+  margin-bottom: 20px;
 }
 
 .wrap-logo {
@@ -42,7 +43,6 @@ header a.active {
   background-color: #FBC02D;
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  }
+
+  
+ 

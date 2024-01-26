@@ -1,0 +1,12 @@
+<div class="example-card">
+    <div class="col">
+      <img class="example-header-image" [src]="product?.img" alt="product">
+    </div>
+    <div class="col" *ngIf="product">
+      <h3>{{product.name}}</h3>
+     <h5> {{product.description}}</h5>
+      <p *ngIf="product.price !== undefined">price: {{product.price}} $</p>
+      <button mat-button mat-raised-button color="warn" (click)="addToLocalStorage(product.id)">Buy</button>
+    </div>
+  </div>
+  

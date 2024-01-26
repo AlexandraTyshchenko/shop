@@ -36,5 +36,11 @@ namespace BLL.Services
 
             return product;
         }
+
+        public async Task<IEnumerable<Product>> GetProductsByIds(int[] ids)
+        {
+            var selectedProducts = await  _dbContext.Products.Where(p => ids.Contains(p.Id)).ToListAsync();
+            return selectedProducts;
+        }
     }
 }
