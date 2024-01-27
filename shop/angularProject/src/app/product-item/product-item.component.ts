@@ -13,10 +13,10 @@ import { CartService } from '../services/CartService';
 export class ProductItemComponent {
   productId: number | null = null;
   product?: Product;
-  readonly localStorage:any;
   
   constructor(  private cartService: CartService
-    , private route: ActivatedRoute, private productService: ProductService) {
+    , private route: ActivatedRoute, private productService: ProductService
+    ) {
 
   }
 

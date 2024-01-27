@@ -47,4 +47,29 @@ export class CartService {
       return [];
     }
   }
+
+  removeIdFromCart(id: number): void {
+    if (this.localStorage) {
+      const cartItems = this.localStorage.getItem('cartItems');
+      const existingCartItems: number[] = cartItems ? JSON.parse(cartItems) : [];
+  
+      // Find the index of the specified id in the array
+      const indexToRemove = existingCartItems.indexOf(id);
+  
+      if (indexToRemove !== -1) {
+        // Remove the specified id from the array
+        existingCartItems.splice(indexToRemove, 1);
+  
+        // Save the updated cart items back to localStorage
+        this.localStorage.setItem('cartItems', JSON.stringify(existingCartItems));
+        this.updateItemCount();
+        console.log('Updated Cart Items:', existingCartItems);
+      } else {
+        console.log(`Item with id ${id} not found in the cart.`);
+      }
+    } else {
+      console.error('LocalStorage is not supported by the browser.');
+    }
+  }
+  
 }

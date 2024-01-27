@@ -10,13 +10,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { BasketComponent } from './basket/basket.component';
+import { OrderComponent } from './order/order.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     ProductItemComponent,
-    BasketComponent
+    BasketComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

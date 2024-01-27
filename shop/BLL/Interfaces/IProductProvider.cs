@@ -1,4 +1,5 @@
-﻿using DAL.Entities;
+﻿using BLL.Models;
+using DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,6 @@ namespace BLL.Interfaces
     {
         Task<IEnumerable<Product>> GetAllProductsAsync();
         Task<Product> GetProductByIdAsync(int id);
-        Task<IEnumerable<Product>> GetProductsByIds(int[] ids);
+        Task<TotalProducts> GetProductsByIds(int[] ids);
     }
 }

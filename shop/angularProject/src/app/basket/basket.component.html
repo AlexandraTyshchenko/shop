@@ -1,1 +1,22 @@
-<p>basket works!</p>
+<h3>My Products</h3>
+<div class="centered-button">
+    <button mat-button mat-raised-button color="primary" [routerLink]="'/order'">Create order</button>
+    <h1>total price: {{totalPrice}}</h1>
+  </div>
+
+<div class="card-container">
+    <div *ngFor="let product of products" class="example-card">
+      <mat-card >
+        <img mat-card-image src="{{product.img}}" alt="product">
+        <mat-card-content [routerLink]="['/products', product.id]">
+          <p>{{product.name}}</p>
+          <p>{{product.description}}</p>
+          <p>total: {{product.price}} $</p>
+          <p>count: {{product.count}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button mat-raised-button color="warn" (click)="remove(product.id)" >remove</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>

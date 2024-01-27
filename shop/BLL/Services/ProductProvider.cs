@@ -1,5 +1,6 @@
 ﻿using BLL.Exceptions;
 using BLL.Interfaces;
+using BLL.Models;
 using DAL.Context;
 using DAL.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,8 @@ namespace BLL.Services
 {
     public class ProductProvider : IProductProvider
     {
+      
+
         private readonly ApplicationContext _dbContext;
 
         public ProductProvider(ApplicationContext dbContext)
@@ -37,10 +40,29 @@ namespace BLL.Services
             return product;
         }
 
-        public async Task<IEnumerable<Product>> GetProductsByIds(int[] ids)
+        public async Task<TotalProducts> GetProductsByIds(int[] ids)
         {
-            var selectedProducts = await  _dbContext.Products.Where(p => ids.Contains(p.Id)).ToListAsync();
-            return selectedProducts;
+            var selectedProducts = await _dbContext.Products
+                .Where(p => ids.Contains(p.Id))
+                .ToListAsync();
+
+            var productCounts = ids
+                .GroupBy(id => id)
+                .Select(g => new ProductWithCount
+                {
+                    Id = g.Key,
+                    Name = selectedProducts.FirstOrDefault(p => p.Id == g.Key)?.Name,
+                    Description = selectedProducts.FirstOrDefault(p => p.Id == g.Key)?.Description,
+                    Price = selectedProducts.FirstOrDefault(p => p.Id == g.Key).Price*g.Count(),
+                    Img = selectedProducts.FirstOrDefault(p => p.Id == g.Key)?.Img,
+                    Count = g.Count()
+                });
+            decimal totalPrice = productCounts.Select(x=>x.Price).Sum();
+    
+            return new TotalProducts() { Products = productCounts, Total = totalPrice }; 
         }
+
+
+
     }
 }
