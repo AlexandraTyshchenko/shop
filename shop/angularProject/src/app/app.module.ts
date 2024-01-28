@@ -16,6 +16,8 @@ import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { SuccessComponent } from './success/success.component';
+import { CancelComponent } from './cancel/cancel.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     ProductListComponent,
     ProductItemComponent,
     BasketComponent,
-    OrderComponent
+    OrderComponent,
+    SuccessComponent,
+    CancelComponent,
   ],
   imports: [
     BrowserModule,
