@@ -11,6 +11,7 @@ builder.Services.AddDbContext<ApplicationContext>(options =>
           options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IProductProvider,ProductProvider>();
+builder.Services.AddScoped<IOrderCreator,OrderCreator>();
 builder.Services.AddAutoMapper(typeof(MapperConfig));
 
 builder.Services.AddControllers();
@@ -37,5 +38,14 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
+UpdateDatabase(app);
 app.Run();
+
+void UpdateDatabase(WebApplication app) //for applying migrations automatically
+{
+    using (var serviceScope = app.Services.CreateScope())
+    {
+        ApplicationContext context = serviceScope.ServiceProvider.GetService<ApplicationContext>();
+        context.Database.Migrate();
+    }
+}

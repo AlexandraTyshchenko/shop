@@ -14,6 +14,7 @@ namespace DAL.Entities
        public DateTime OrderDate { get; set; }
        public OrderStatus OrderStatus { get; set; }
        public bool IsPaid { get; set; }
-       public ICollection<Product> Products { get; set; }
+       public decimal TotalPrice {  get; set; }
+       public ICollection<OrderItem> OrderItems { get; set; }
     }
 }

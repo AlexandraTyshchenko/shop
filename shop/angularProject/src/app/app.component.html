@@ -1,6 +1,6 @@
 <header>
-  <div class="wrap-logo">
-    <a class="logo">Shop</a>
+  <div class="wrap-logo" [routerLink]="'/productlist'">
+    <a class="logo" >Store</a>
   </div>
   <nav>
     <button mat-button mat-raised-button color="warn" [routerLink]="'/myproducts'">Basket ({{ itemsCount }})</button>

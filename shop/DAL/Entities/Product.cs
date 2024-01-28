@@ -13,6 +13,6 @@ namespace DAL.Entities
         public decimal Price { get; set; }
         public string Img { get; set; }
         // Navigation property for many-to-many relationship with Order
-        public ICollection<Order> Orders { get; set; }
+        public ICollection<OrderItem> OrderItems { get; set; }
     }
 }

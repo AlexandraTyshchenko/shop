@@ -20,9 +20,6 @@ namespace DAL.EntityConfigurations
             builder.Property(x => x.LastName).IsRequired().HasMaxLength(50);
             builder.Property(x => x.PhoneNumber).IsRequired().HasMaxLength(10);
             builder.Property(x => x.Email).IsRequired();
-            builder.HasMany(c => c.Orders)
-                .WithOne(o => o.Customer)
-                .HasForeignKey(o => o.Id);
         }
     }
 }

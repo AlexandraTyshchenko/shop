@@ -4,6 +4,7 @@ using DAL.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAL.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20240128150523_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -142,48 +145,6 @@ namespace DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "Description 1",
-                            Img = "https://lh3.googleusercontent.com/drive-viewer/AEYmBYQPgYa4fNqmKd8VdtzELhQy6t3vBPnK-Sx_2XEPKmUvOr1BWt5gY7TyWYdUQAfM61pwuyD3Wnp_A82XrMmtBoNnG1mh=s2560",
-                            Name = "Product 1",
-                            Price = 10.99m
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "Description 2",
-                            Img = "https://lh3.googleusercontent.com/drive-viewer/AEYmBYQPgYa4fNqmKd8VdtzELhQy6t3vBPnK-Sx_2XEPKmUvOr1BWt5gY7TyWYdUQAfM61pwuyD3Wnp_A82XrMmtBoNnG1mh=s2560",
-                            Name = "Product 2",
-                            Price = 19.99m
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "Description 3",
-                            Img = "https://lh3.googleusercontent.com/drive-viewer/AEYmBYQPgYa4fNqmKd8VdtzELhQy6t3vBPnK-Sx_2XEPKmUvOr1BWt5gY7TyWYdUQAfM61pwuyD3Wnp_A82XrMmtBoNnG1mh=s2560",
-                            Name = "Product 3",
-                            Price = 25.99m
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Description = "Description 4",
-                            Img = "https://lh3.googleusercontent.com/drive-viewer/AEYmBYQPgYa4fNqmKd8VdtzELhQy6t3vBPnK-Sx_2XEPKmUvOr1BWt5gY7TyWYdUQAfM61pwuyD3Wnp_A82XrMmtBoNnG1mh=s2560",
-                            Name = "Product 4",
-                            Price = 14.99m
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Description = "Description 5",
-                            Img = "https://lh3.googleusercontent.com/drive-viewer/AEYmBYQPgYa4fNqmKd8VdtzELhQy6t3vBPnK-Sx_2XEPKmUvOr1BWt5gY7TyWYdUQAfM61pwuyD3Wnp_A82XrMmtBoNnG1mh=s2560",
-                            Name = "Product 5",
-                            Price = 30.99m
-                        });
                 });
 
             modelBuilder.Entity("DAL.Entities.Order", b =>

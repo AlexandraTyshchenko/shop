@@ -1,6 +1,6 @@
 <h3>My Products</h3>
 <div class="centered-button">
-    <button mat-button mat-raised-button color="primary" [routerLink]="'/order'">Create order</button>
+    <button *ngIf ="cartItems.length!==0" mat-button mat-raised-button color="primary" [routerLink]="'/order'">Create order</button>
     <h1>total price: {{totalPrice}}</h1>
   </div>
 

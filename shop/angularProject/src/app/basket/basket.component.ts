@@ -16,6 +16,7 @@ totalPrice=0;
   constructor(  private cartService: CartService,private productService:ProductService) {
     this.updateCartItems();
   }
+  
   private updateCartItems(){
     this.cartItems = this.cartService.getCartItems();
     this.loadProducts()

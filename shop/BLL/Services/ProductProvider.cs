@@ -53,11 +53,11 @@ namespace BLL.Services
                     Id = g.Key,
                     Name = selectedProducts.FirstOrDefault(p => p.Id == g.Key)?.Name,
                     Description = selectedProducts.FirstOrDefault(p => p.Id == g.Key)?.Description,
-                    Price = selectedProducts.FirstOrDefault(p => p.Id == g.Key).Price*g.Count(),
+                    Price = selectedProducts.FirstOrDefault(p => p.Id == g.Key)?.Price*g.Count(),
                     Img = selectedProducts.FirstOrDefault(p => p.Id == g.Key)?.Img,
                     Count = g.Count()
                 });
-            decimal totalPrice = productCounts.Select(x=>x.Price).Sum();
+            decimal? totalPrice = productCounts.Select(x=>x.Price).Sum();
     
             return new TotalProducts() { Products = productCounts, Total = totalPrice }; 
         }

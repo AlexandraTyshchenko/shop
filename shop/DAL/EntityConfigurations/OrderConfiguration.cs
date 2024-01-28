@@ -19,12 +19,12 @@ namespace DAL.EntityConfigurations
             builder.Property(x => x.OrderDate);
             builder.Property(x => x.OrderStatus);
             builder.Property(x => x.IsPaid);
-            builder.HasMany(o => o.Products)
-              .WithMany(p => p.Orders);
+;
             // One-to-many relationship configuration
             builder.HasOne(o => o.Customer)
                 .WithMany(c => c.Orders)
-                .HasForeignKey(o => o.Id);
+                .HasForeignKey(o => o.CustomerId);
+
         }
     }
 }

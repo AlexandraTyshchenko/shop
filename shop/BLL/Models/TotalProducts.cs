@@ -9,6 +9,6 @@ namespace BLL.Models
     public class TotalProducts
     {
         public IEnumerable<ProductWithCount> Products { get; set; }
-        public decimal Total { get; set; }
+        public decimal? Total { get; set; }
     }
 }
